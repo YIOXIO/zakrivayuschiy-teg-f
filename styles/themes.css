@@ -4,3 +4,51 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light{
+    --main-font: 'Inter-Variable', arial, sans-serif;
+    --accent-font: 'PressStart2P-Regular', arial, sans-serif;
+    --main-weight: 'wght' 400;
+    --accent-weight: 'wght' 700;
+    --bg-color:#fff;
+    --bg-image: 
+        repeating-linear-gradient(90deg, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+        repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+        linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    --accent-color:#000;
+    --text-color:#000;
+    --heart-color:#000;
+}
+
+:root.theme-dark{
+    --main-font: 'Inter-Variable', arial, sans-serif;
+    --accent-font: 'PressStart2P-Regular', arial, sans-serif;
+    --main-weight: 'wght' 465;
+    --accent-weight: 'wght' 700;
+    --bg-color:#000;
+    --bg-image: 
+        repeating-linear-gradient(90deg, #000 0, #000 2px, transparent 2px, transparent 4px),
+        repeating-linear-gradient(to bottom, #000 0, #000 2px, transparent 2px, transparent 4px),
+        linear-gradient(to bottom, #007f0c 0.01%, #004306);
+    --accent-color:#00CC14;
+    --text-color:#00CC14;
+    --heart-color:#00CC14;
+}
+
+@media (prefers-color-scheme: light){
+    :root{
+        --main-font: 'Inter-Variable', arial, sans-serif;
+        --accent-font: 'PressStart2P-Regular', arial, sans-serif;
+        --main-weight: 'wght' 400;
+        --accent-weight: 'wght' 700;
+        --bg-color:#fff;
+        --bg-image: 
+            repeating-linear-gradient(90deg, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+            repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+            linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+        --accent-color:#000;
+        --text-color:#000;
+        --heart-color:#000;
+    
+    }
+}

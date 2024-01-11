@@ -39,7 +39,3 @@ function setButtonText(heart, button) {
     );
   }
 }
-
-push.addEventListener('click', () =>
-  rCross.toggle('appear')
-);

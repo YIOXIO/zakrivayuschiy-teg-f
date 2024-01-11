@@ -1,1 +1,3 @@
-В этой папке будут храниться все необходимые SVG-файлы для сайта.
+https://github.com/YIOXIO/zakrivayuschiy-teg-f
+
+https://yioxio.github.io/zakrivayuschiy-teg-f/

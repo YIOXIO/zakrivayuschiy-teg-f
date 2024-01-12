@@ -69,6 +69,8 @@
   position: relative;
   padding: 0;
   font-size: 14px;
+  inline-size: 84px;
+  margin-inline-end: -19px;
 }
 
 .theme-menu__button::after {
@@ -105,16 +107,13 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   animation: bounce 0.5s ease-in-out infinite alternate;
+  position: absolute;
+  margin-inline-start: -19px;
+
+
 }
 
-@keyframes bounce {
-  from {
-    translate: 0;
-  }
-  to {
-    translate: 4px;
-  }
-}
+
 
 .card {
   background-color: var(--bg-color);
@@ -157,14 +156,20 @@
     text-shadow: none;
   }
 }
+.card__picture{
+  display: flex;
+  margin-block-end: clamp(1.35rem, 1.224rem + 0.376vw, 1.563rem);
+  border-bottom: 2px solid var(--accent-color);
+  border-top: 2px solid var(--accent-color);
+}
 
 .card__image {
   inline-size: 100%;
   object-fit: cover;
   object-position: right;
-  margin-block-end: clamp(1.35rem, 1.224rem + 0.376vw, 1.563rem);
   min-block-size: clamp(23.438rem, 16.373rem + 30.141vw, 43.5rem);
 }
+
 .card__image_sepia {
   filter: sepia(0.8);
 }
@@ -189,6 +194,7 @@
 }
 .card__description {
   font: 18px var(--main-font);
+  font-variation-settings:  var(--main-weight);
   color: var(--text-color);
   padding-inline: 25px 25.95px;
   margin-block-end: 27px;
@@ -266,43 +272,15 @@
 .main-body {
   fill: transparent;
 }
-
 .sparks {
   opacity: 0;
 }
 
-.card__icon-button:hover .core {
-  fill: var(--heart-color);
-  transition: fill 0.3s ease;
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--heart-color);
-  transition: fill 0.6s ease;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--heart-fill-color);
-  transition: fill 0.5s ease;
-}
-.like-icon.is-liked .main-body {
-  fill: var(--heart-fill-color);
-  transition: fill 0.6s ease;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparksOpacity 0.5s ease alternate 0.3s;
-}
-
-.like-icon.is-liked .heart {
-  animation: pulse 0.3s ease alternate 0.3s;
-  transform-origin: center;
-}
 
 .footer {
   display: flex;
   justify-content: center;
-  background-color: var(--bg-color);
+  background-color: transparent;
   margin-inline: clamp(0rem, -8.1866rem + 34.9296vw, 23.25rem);
 }
 
@@ -319,6 +297,8 @@
   gap: 9px;
   margin-block: 46px 104px;
   padding: 15px 20px 15px 19px;
+  background-color: var(--bg-color);
+  flex-direction: column;
 }
 
 .dialog {
@@ -360,23 +340,6 @@
 .dialog__button {
   flex: 100%;
 }
-@keyframes pulse {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.2);
-  }
-}
-
-@keyframes sparksOpacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 @media (width >= 768px) {
   .footer__button {
@@ -389,5 +352,9 @@
 
   .dialog {
     padding-inline: 19px;
+  }
+
+  .card__description{
+    padding-inline: 23px 22.95px;
   }
 }

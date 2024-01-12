@@ -12,3 +12,67 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+@keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
+  @keyframes sparksOpacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes bounce {
+    from {
+      translate: 0;
+    }
+    to {
+      translate: 4px;
+    }
+  }
+  .card__icon-button:hover .core {
+    fill: var(--heart-color);
+    transition: fill 0.3s ease;
+  }
+  .card__icon-button:active .core{
+    fill: var(--heart-color);
+    transition: fill .9s ease;
+  }
+  
+  .card__icon-button:hover .main-body {
+    fill: var(--heart-color);
+    transition: fill 0.6s ease;
+  }
+  .card__icon-button:active .main-body{
+    fill: var(--heart-fill-color);
+    transition: fill 1.3s ease;
+  }
+  
+  .like-icon.is-liked .contour {
+    fill: var(--heart-fill-color);
+    transition: fill 0.5s ease;
+  }
+  .like-icon.is-liked .main-body {
+    fill: var(--heart-fill-color);
+    transition: fill 0.6s ease;
+  }
+  .like-icon.is-liked .core{
+    fill: var(--heart-fill-color);
+    transition: fill 0.6s ease;
+  }
+  
+  .like-icon.is-liked .sparks {
+    animation: sparksOpacity 0.5s ease alternate 0.3s;
+  }
+  
+  .like-icon.is-liked .heart {
+    animation: pulse 0.3s ease alternate 0.3s;
+    transform-origin: center;
+  }

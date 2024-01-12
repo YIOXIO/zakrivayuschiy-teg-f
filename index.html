@@ -18,8 +18,8 @@
   </head>
   <body class="page">
     <header class="header">
-      <h1 class="header__title">&lt;/Html&gt;</h1>
-      <h2 class="header__subtitle">закрывающий тег</h2>
+      <p class="header__title">&lt;/Html&gt;</p>
+      <h1 class="header__subtitle">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -51,7 +51,7 @@
         <h2 class="card__title">
           Фритрек и нулевой спринт: Подготовка к работе
         </h2>
-        <h3 class="card__watermark">&lt;/Html&gt;</h3>
+        <span class="card__watermark">&lt;/Html&gt;</span>
         <picture class="card__picture">
           <source srcset="./images/car.avif" type="image/avif" />
           <source srcset="./images/car.webp" type="image/webp" />
@@ -584,17 +584,9 @@
           </button>
         </div>
       </article>
-    </main>
-    <footer class="footer">
-      <button class="button footer__button" type="button" onclick="window['dialog'].showModal()">
-          <svg class="floppy" view="0 0 29 28">
-            <use href="./svg/floppy.svg#floppy">
-          </svg>
-        <span class='button__text'>Сохранить на память</span>
-      </button>
       <dialog id="dialog" class="dialog">
-        <svg class="floppy" view="0 0 29 28">
-          <use href="./svg/floppy.svg#floppy">
+        <svg class="floppy">
+          <use href="./svg/floppy.svg#floppy"/>
         </svg>
         <p class="dialog__text">Вставьте
           дискету, чтобы продолжить</p>
@@ -602,6 +594,14 @@
           <span class="button__text">ОК</span>
         </button>
       </dialog>
+    </main>
+    <footer class="footer">
+      <button class="button footer__button" type="button" onclick="window['dialog'].showModal()">
+          <svg class="floppy">
+            <use href="./svg/floppy.svg#floppy"/>
+          </svg>
+        <span class='button__text'>Сохранить на память</span>
+      </button>
     </footer>
     <script src="./scripts/like.js"></script>
   </body>

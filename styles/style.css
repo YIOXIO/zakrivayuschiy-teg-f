@@ -109,11 +109,7 @@
   animation: bounce 0.5s ease-in-out infinite alternate;
   position: absolute;
   margin-inline-start: -19px;
-
-
 }
-
-
 
 .card {
   background-color: var(--bg-color);
@@ -156,7 +152,7 @@
     text-shadow: none;
   }
 }
-.card__picture{
+.card__picture {
   display: flex;
   margin-block-end: clamp(1.35rem, 1.224rem + 0.376vw, 1.563rem);
   border-bottom: 2px solid var(--accent-color);
@@ -194,7 +190,7 @@
 }
 .card__description {
   font: 18px var(--main-font);
-  font-variation-settings:  var(--main-weight);
+  font-variation-settings: var(--main-weight);
   color: var(--text-color);
   padding-inline: 25px 25.95px;
   margin-block-end: 27px;
@@ -276,7 +272,6 @@
   opacity: 0;
 }
 
-
 .footer {
   display: flex;
   justify-content: center;
@@ -354,7 +349,7 @@
     padding-inline: 19px;
   }
 
-  .card__description{
+  .card__description {
     padding-inline: 23px 22.95px;
   }
 }
